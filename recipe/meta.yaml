@@ -1,4 +1,4 @@
-{% set version = '0.3.0' %}
+{% set version = "0.3.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mmapcharr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mmapcharr/mmapcharr_{{ version }}.tar.gz
-  sha256: 19143a055dd6488045dc0cad1091444c7ed71aadd420f63b6b8c7ee39559b89c
+  sha256: acd76bceef528c4593e446a956240ba0fff917f13a09f218c3ceb689da12e30a
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -52,8 +52,7 @@ test:
 about:
   home: https://github.com/privefl/mmapcharr
   license: GPL-3.0-only
-  summary: Uses memory-mapping to enable the random access of elements of a text file of characters
-    separated by characters as if it were a simple R(cpp) matrix.
+  summary: Uses memory-mapping to enable the random access of elements of a text file of characters separated by characters as if it were a simple R(cpp) matrix.
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
